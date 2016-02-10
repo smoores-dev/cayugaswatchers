@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* line 19, ../sass/home.sass */
+h1 {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* line 23, ../sass/home.sass */
+.party-safe {
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+/* line 26, ../sass/home.sass */
+.party-safe h1 {
+  text-align: center;
+  border: solid white thin;
+  padding: 10px;
+}
+
+/* line 32, ../sass/home.sass */
+.mission h1 {
+  margin-bottom: 50px;
+}
+/* line 34, ../sass/home.sass */
+.mission .circle {
+  background: #1a8aa2;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  -moz-transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  -ms-transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+/* line 47, ../sass/home.sass */
+.mission .circle:after {
+  height: 0;
+  width: 0;
+  color: rgba(255, 255, 255, 0);
+  -webkit-transition: color 0s ease-in-out 0s;
+  -moz-transition: color 0s ease-in-out 0s;
+  -ms-transition: color 0s ease-in-out 0s;
+  transition: color 0s ease-in-out 0s;
+  font-size: 80%;
+  padding: 5px;
+}
+/* line 54, ../sass/home.sass */
+.mission .circle:hover {
+  border-radius: 5%;
+}
+/* line 58, ../sass/home.sass */
+.mission .circle:hover:after {
+  -webkit-transition: color 0.5s ease-in-out 0.5s;
+  -moz-transition: color 0.5s ease-in-out 0.5s;
+  -ms-transition: color 0.5s ease-in-out 0.5s;
+  transition: color 0.5s ease-in-out 0.5s;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+/* line 64, ../sass/home.sass */
+.mission .circle:hover h2 {
+  display: none;
+}
+
+/* line 67, ../sass/home.sass */
+.mission .circle.operations:after {
+  content: "Cayuga’s Watchers recruits, hires, and trains students to anonymously attend campus social events at the request of the hosting student organization.";
+}
+
+/* line 70, ../sass/home.sass */
+.mission .circle.values:after {
+  content: "Cayuga’s Watchers is confidential, student-led, non-confrontational, and peer-to-peer.";
+}
+
+/* line 73, ../sass/home.sass */
+.mission .circle.goals:after {
+  content: "Cayuga’s Watchers aims to combat the dangers associated with high-risk drinking and replace campus social norms by emphasizing safe and responsible alcohol consumption.";
+}
+
+/* line 76, ../sass/home.sass */
+.mission-statement {
+  padding: 20px 80px;
+  padding-bottom: 0;
+}
+
+/* line 81, ../sass/home.sass */
+.services .timeline {
+  height: 50px;
+  padding: 0;
+}
+/* line 84, ../sass/home.sass */
+.services hr {
+  border: solid white 2px;
+}
+/* line 86, ../sass/home.sass */
+.services .vr {
+  width: 0;
+  height: 100%;
+  border: solid white 2px;
+  position: absolute;
+  top: -24px;
+}
+/* line 92, ../sass/home.sass */
+.services .vr.second {
+  left: 50%;
+}
+/* line 94, ../sass/home.sass */
+.services .vr.third {
+  left: 100%;
+}
+
+/* line 97, ../sass/home.sass */
+.services-statement {
+  text-align: center;
+  padding: 0 80px 20px 80px;
+}
+
+/* line 101, ../sass/home.sass */
+.timeline-blurb {
+  text-align: justify;
+}
+/* line 103, ../sass/home.sass */
+.timeline-blurb p {
+  font-size: 80%;
+}
+
+/* line 107, ../sass/home.sass */
+.support-statement {
+  padding: 0 80px 20px 80px;
+}
+
+/* line 110, ../sass/home.sass */
+.profile h2 {
+  text-align: center;
+}
+
+/* line 113, ../sass/home.sass */
+.profile img {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 121, ../sass/home.sass */
+.exec {
+  margin-top: 80px;
+  background: #c8c8d2;
+  border: solid thin #505050;
+}
+/* line 125, ../sass/home.sass */
+.exec h1, .exec h2 {
+  color: black;
+}
+/* line 127, ../sass/home.sass */
+.exec h3 {
+  color: #505050;
+}
+
+/* line 130, ../sass/home.sass */
+.filings {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background: #141414;
+}

@@ -1,0 +1,99 @@
+/* line 1, ../sass/base.sass */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/background.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+/* line 6, ../sass/base.sass */
+#mobile-background-fix {
+  height: 140%;
+  width: 140%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/background.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  z-index: -5;
+}
+
+/* line 16, ../sass/base.sass */
+h1 {
+  font-size: 150%;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 23, ../sass/base.sass */
+h2 {
+  font-size: 110%;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 30, ../sass/base.sass */
+h3 {
+  font-size: 90%;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* line 39, ../sass/base.sass */
+a {
+  color: #56c6de;
+}
+
+/* line 42, ../sass/base.sass */
+body > a {
+  display: none;
+}
+
+/* line 45, ../sass/base.sass */
+address {
+  font-style: normal;
+}
+
+/* line 48, ../sass/base.sass */
+.top-bar {
+  background: rgba(30, 0, 60, 0);
+  z-index: 100;
+}
+
+/* line 52, ../sass/base.sass */
+.top-bar-section li a, .top-bar-section li {
+  background: none !important;
+}
+
+/* line 55, ../sass/base.sass */
+.top-bar-section li {
+  border-left: white solid medium;
+}
+/* line 57, ../sass/base.sass */
+.top-bar-section li:first-child {
+  border-left: none;
+}
+
+/* line 60, ../sass/base.sass */
+.dropdown li {
+  border: none;
+  background: rgba(30, 0, 60, 0.8) !important;
+}
+/* line 63, ../sass/base.sass */
+.dropdown li:hover {
+  background: rgba(60, 30, 90, 0.8) !important;
+}
+
+/* line 66, ../sass/base.sass */
+.top-bar {
+  letter-spacing: 3px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
