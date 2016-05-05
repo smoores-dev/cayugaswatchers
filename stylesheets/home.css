@@ -156,16 +156,17 @@ h1 {
 /* line 121, ../sass/home.sass */
 .exec {
   margin-top: 80px;
-  background: #c8c8d2;
-  border: solid thin #505050;
+  /*background: #c8c8d2;*/
+  background: rgba(30, 0, 60, 0.5);
+  /*border: solid thin #505050;*/
 }
 /* line 125, ../sass/home.sass */
 .exec h1, .exec h2 {
-  color: black;
+  color: white;
 }
 /* line 127, ../sass/home.sass */
 .exec h3 {
-  color: #505050;
+  color: grey;
 }
 
 /* line 130, ../sass/home.sass */
@@ -174,4 +175,9 @@ h1 {
   padding-top: 20px;
   padding-bottom: 60px;
   background: #141414;
+}
+
+.donate {
+  background-color: #1a8aa2 !important !important;
+  border-right: white solid medium !important;
 }
