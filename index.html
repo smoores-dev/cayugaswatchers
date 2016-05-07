@@ -46,6 +46,7 @@
             </ul>
           </li>
           <li><a href="index.html#contact">CONTACT US</a></li>
+          <a href="#donate"><button class="donate">DONATE</button></a>
         </ul>
       </section>
     </nav>
@@ -123,7 +124,7 @@
         </div>
       </div>
     </section>
-    <section class="support">
+    <section id="donate" class="support">
       <div class="row">
         <h1>SUPPORT</h1>
       </div>
@@ -132,20 +133,41 @@
           The greatest challenge facing Cayuga’s Watchers is funding. Unlike other collegiate bystander intervention programs, due to its 501(c)(3) status, Cayuga’s Watchers operates entirely independent of Cornell University. As a not-for-profit that offers its service to the Cornell community free-of-charge, Cayuga’s Watchers relies on the generosity of other 501(c)(3) organizations, charitable organizations, and individual contributors to provide the capital necessary to conduct its operations.
         </p>
         <p>
-          Please consider <a href="https://www.givegab.com/donations/new?group_id=cayuga-s-watchers">donating here</a> to help our organization continue to grow and improve. Feel free to contact our <a href="mailto:president@cayugaswatchers.org">President</a> or <a href="mailto:externaloperations@cayugaswatchers.org">Director of External Operations</a> with any questions on how to support us, or what your support will go to.
+          Please consider donating to help our organization continue to grow and improve. Feel free to contact our <a href="mailto:president@cayugaswatchers.org">President</a> or <a href="mailto:externaloperations@cayugaswatchers.org">Director of External Operations</a> with any questions on how to support us, or what your support will go to.
         </p>
-        <p>
-          Contact information:
-        </p>
-        <div class="column medium-4 medium-centered">
+      <div class="column medium-5">
+      <h4>Donate by Check:</h4>
           <address>
             Willard Straight Hall<br>
             Mailbox 52<br>
-            Ithaca, NY<br>
-            14853
+            Ithaca, NY 14850
           </address>
           <phone>(585) 376-0842</phone>
+      </div>
+      <div class="column medium-5">
+          <h4>Donate Online:</h4>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="business" value="vp-finance@cayugaswatchers.org">
+              <input type="hidden" name="item_name" value="Donation">
+            
+              Select Donation Amount:
+              <select name="amount">
+                <option value="25">$25</option>
+                <option value="50">$50</option>
+                <option value="100">$100</option>
+                <option value="200">$200</option>
+              </select>
+           
+              <input type="hidden" name="no_shipping" value="0">
+              <input type="hidden" name="no_note" value="1">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="bn" value="PP-BuyNowBF">
+              <input type="hidden" name="return" value="http://cayugaswatchers.org">
+              <button type="submit">Confirm Donation</button>
+          </form>
         </div>
+      </div>
       </div>
     </section>
     <section class="column medium-10 large-8 medium-centered exec">

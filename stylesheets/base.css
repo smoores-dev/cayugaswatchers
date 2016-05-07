@@ -97,3 +97,8 @@ address {
   width: 100%;
   top: 0;
 }
+
+.donate {
+  border-radius: 10px;
+  margin-right: 10px;
+}
