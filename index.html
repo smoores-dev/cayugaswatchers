@@ -10,10 +10,16 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-      d3.csv("https://docs.google.com/spreadsheets/d/1QKCpQw15ek40yb4iNSP1ztmOML9U7FFmn0HLw9i8HnQ/export?format=csv", function(data) {
-        document.getElementById("number-events").innerText = data[0].events;
-        document.getElementById("number-employees").innerText = data[0].employees;  
-        document.getElementById("number-interventions").innerText = data[0].interventions;      
+      // d3.csv("https://docs.google.com/spreadsheets/d/1QKCpQw15ek40yb4iNSP1ztmOML9U7FFmn0HLw9i8HnQ/export?format=csv", function(data) {
+      //   document.getElementById("number-events").innerText = data[0].events;
+      //   document.getElementById("number-employees").innerText = data[0].employees;  
+      //   document.getElementById("number-interventions").innerText = data[0].interventions;      
+      // });
+      d3.json("https://sheets.googleapis.com/v4/spreadsheets/1QKCpQw15ek40yb4iNSP1ztmOML9U7FFmn0HLw9i8HnQ/values/A1:C3?key=AIzaSyDsAIkBEdysJPXBzntUgMHSdYMhoCo0n2s", function(data) {
+        document.getElementById("number-events").innerText = data.values[1][0];
+        document.getElementById("number-interventions").innerText = data.values[1][1];  
+        document.getElementById("number-employees").innerText = data.values[1][2];  
+        console.log(data);    
       });
     </script>
   </head>
