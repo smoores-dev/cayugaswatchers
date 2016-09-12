@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="stylesheets/home.css" />
     <link rel="stylesheet" href="stylesheets/base.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+      d3.csv("https://docs.google.com/spreadsheets/d/1QKCpQw15ek40yb4iNSP1ztmOML9U7FFmn0HLw9i8HnQ/export?format=csv", function(data) {
+        document.getElementById("number-events").innerText = data[0].events;
+        document.getElementById("number-employees").innerText = data[0].employees;  
+        document.getElementById("number-interventions").innerText = data[0].interventions;      
+      });
+    </script>
   </head>
   <body>
     <div class="show-for-small-only" id="mobile-background-fix"></div>
@@ -90,6 +98,20 @@
         <p>Cayuga’s Watchers is a student-led 501(c)(3) independent organization designed to mitigate the harms associated with high-risk drinking while promoting student safety at Cornell University.</p>
 
         <p>We aim to become an established national model for combating high-risk drinking by promoting peer social responsibility at Cornell University.</p>
+      </div>
+        <div class="row">
+        <div class="column medium-3" style="text-align: center;">
+                <span id="number-events" style="font-size: 100px"></span>
+                <h2>Number of Events</h2>
+        </div>
+        <div class="column medium-4 medium-offset-1" style="text-align: center;">
+                <span id="number-interventions" style="font-size: 100px"></span>
+                <h2>Number of Interventions</h2>
+        </div>
+        <div class="column medium-3 medium-offset-1" style="text-align: center;">
+                <span id="number-employees" style="font-size: 100px"></span>
+                <h2>Number of Employees</h2>
+        </div>
       </div>
     </section>
     <section class="services">
