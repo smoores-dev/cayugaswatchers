@@ -1,0 +1,204 @@
+.donate-select {
+  border-radius: 10px;
+  width: 34%;
+  color: black;
+}
+
+.profile img {
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.name {
+	font-size: 20px;
+}
+
+.role {
+	font-size: 13px;
+	color: grey;
+}
+
+.contact-form input, textarea {
+	width: 100%;
+	padding: 8px;
+	color: black;
+}
+
+.contact-form textarea {
+	resize: vertical;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+    background: rgba(30, 0, 60, 0.9);
+}
+
+.counter {
+	font-size: 100px
+}
+
+.donate-check {
+	background: rgba(30, 0, 60, 0.5); 
+	padding: 23px;;
+}
+
+.donate-online {
+	background: rgba(30, 0, 60, 0.5); 
+	padding: 25px;
+}
+
+.executive-board {
+	background: rgba(30, 0, 60, 0.5); 
+	padding: 45px;
+}
+
+.blog-post {
+	background: rgba(255, 255, 255, 0.8);
+	color: black; 
+	padding: 45px;
+	margin-bottom: 50px;
+}
+
+.article {
+	padding: 20px; 
+	background: rgba(255, 255, 255, 0.8);
+	color: black;
+}
+
+.article:hover {
+	background: rgba(255, 255, 255, 0.65);
+	cursor: pointer;
+}
+
+.article-link {
+	color: white !important;
+}
+
+.article-link:hover {
+	color: white !important;
+}
+
+.contact-container {
+	background: rgba(30, 0, 60, 0.5); 
+	padding: 25px;
+}
+
+.dropdown-menu li a{
+	color: white;
+	padding: 10px;
+}
+
+.tagline {
+	border: 1px solid white; padding: 20px;
+}
+
+.motto {
+	font-size: 15px;
+}
+
+.dropdown-menu li:hover {
+	background: rgba(60, 30, 90, 0.8);
+}
+
+.dropdown-menu li a:hover{
+	background: rgba(60, 30, 90, 0.8);
+}
+
+@media (min-width: 979px) {
+  	ul.nav li.dropdown:hover > ul.dropdown-menu {
+    	display: block;
+  	}
+
+  	.donate {
+		border: 1px solid white;
+	}
+	.donate:hover {
+		transition: background-color 1.0s ease;
+		transition: border-color 1.0s ease;
+		color: #fff;
+    	background-color: #337ab7;
+    	border-color: #2e6da4;
+	}
+  .margin-top-25 {
+    margin-top: 25px;
+  }
+  .article-link {
+    margin-top: 25px;
+  }
+}
+/* line 34, ../sass/home.sass */
+.mission .circle {
+  cursor: pointer;
+  background: #1a8aa2;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  -moz-transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  -ms-transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+/* line 47, ../sass/home.sass */
+.mission .circle:after {
+  height: 0;
+  width: 0;
+  color: rgba(255, 255, 255, 0);
+  -webkit-transition: color 0s ease-in-out 0s;
+  -moz-transition: color 0s ease-in-out 0s;
+  -ms-transition: color 0s ease-in-out 0s;
+  transition: color 0s ease-in-out 0s;
+  padding: 5px;
+}
+/* line 54, ../sass/home.sass */
+.mission .circle:hover {
+  border-radius: 5%;
+}
+/* line 58, ../sass/home.sass */
+.mission .circle:hover:after {
+  -webkit-transition: color 0.5s ease-in-out 0.5s;
+  -moz-transition: color 0.5s ease-in-out 0.5s;
+  -ms-transition: color 0.5s ease-in-out 0.5s;
+  transition: color 0.5s ease-in-out 0.5s;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+/* line 64, ../sass/home.sass */
+.mission .circle:hover h2 {
+  display: none;
+}
+
+.mission .circle h2 {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+/* line 67, ../sass/home.sass */
+.mission .circle.operations:after {
+  content: "Cayuga’s Watchers recruits, hires, and trains students to anonymously attend campus social events at the request of the hosting student organization.";
+  font-size: 13.5px;
+}
+
+/* line 70, ../sass/home.sass */
+.mission .circle.values:after {
+  content: "Cayuga’s Watchers is confidential, student-led, non-confrontational, and peer-to-peer.";
+  font-size: 17px;
+}
+
+/* line 73, ../sass/home.sass */
+.mission .circle.goals:after {
+  content: "Cayuga’s Watchers aims to combat the dangers associated with high-risk drinking and replace campus social norms by emphasizing safe and responsible alcohol consumption.";
+  font-size: 13px;
+}
