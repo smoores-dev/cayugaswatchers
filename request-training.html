@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Training — Cayuga's Watchers</title>
+  <meta name="description" content="Request a free, student-led bystander intervention training from Cayuga's Watchers for your Cornell organization.">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="img/white-cup.png" alt="Cayuga's Watchers logo">
+        <span>Cayuga's Watchers</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="get-involved.html" class="active">Get Involved</a></li>
+        <li><a href="donate.html" class="btn-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Request a Training</h1>
+      <p>Book a free, student-led bystander intervention training for your organization. Sessions run 45&ndash;60 minutes.</p>
+    </div>
+  </header>
+
+  <hr class="divider">
+
+  <!-- Form -->
+  <section class="section">
+    <div class="container">
+      <div class="form-wrap">
+
+        <form class="cw-form" action="https://api.web3forms.com/submit" method="POST" data-success="#form-success">
+          <input type="hidden" name="access_key" value="0d0a8cde-b4fd-438d-80e8-d9cc057f0fe0">
+          <input type="hidden" name="subject" value="New Training Request — Cayuga's Watchers">
+          <input type="hidden" name="from_name" value="Cayuga's Watchers Website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="rt-name">Your Name <span class="req">*</span></label>
+              <input type="text" id="rt-name" name="Your Name" required>
+            </div>
+            <div class="field">
+              <label for="rt-email">Your Email <span class="req">*</span></label>
+              <input type="email" id="rt-email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="rt-phone">Your Phone <span class="req">*</span></label>
+              <input type="tel" id="rt-phone" name="Phone" required>
+            </div>
+            <div class="field">
+              <label for="rt-org">Your Organization <span class="req">*</span></label>
+              <input type="text" id="rt-org" name="Organization" required>
+            </div>
+            <div class="field">
+              <label for="rt-date1">Primary Requested Training Date <span class="req">*</span></label>
+              <input type="date" id="rt-date1" name="Primary Requested Date" required>
+            </div>
+            <div class="field">
+              <label for="rt-time1">Primary Requested Training Time <span class="req">*</span></label>
+              <input type="time" id="rt-time1" name="Primary Requested Time" required>
+            </div>
+            <div class="field">
+              <label for="rt-date2">Alternate Requested Training Date <span class="req">*</span></label>
+              <input type="date" id="rt-date2" name="Alternate Requested Date" required>
+            </div>
+            <div class="field">
+              <label for="rt-time2">Alternate Requested Training Time <span class="req">*</span></label>
+              <input type="time" id="rt-time2" name="Alternate Requested Time" required>
+            </div>
+            <div class="field">
+              <label for="rt-attendance">Estimated Attendance <span class="req">*</span></label>
+              <input type="number" id="rt-attendance" name="Estimated Attendance" min="1" required>
+            </div>
+            <div class="field">
+              <label for="rt-membership">Total Organization Membership <span class="req">*</span></label>
+              <input type="number" id="rt-membership" name="Total Organization Membership" min="1" required>
+            </div>
+            <div class="field full">
+              <label for="rt-location">Address for Intended Presentation Location <span class="opt">(optional)</span></label>
+              <input type="text" id="rt-location" name="Presentation Location">
+            </div>
+            <div class="field full">
+              <label>Do you have a projector/screen or TV where the training will take place? <span class="req">*</span></label>
+              <div class="checkbox-group" data-required>
+                <label><input type="checkbox" name="A/V Available" value="Projector/screen"> Projector/screen</label>
+                <label><input type="checkbox" name="A/V Available" value="TV"> TV</label>
+                <label><input type="checkbox" name="A/V Available" value="HDMI cable"> HDMI cable</label>
+                <label><input type="checkbox" name="A/V Available" value="Adapters for Mac (DisplayPort)"> Adapters for Mac (DisplayPort)</label>
+                <label><input type="checkbox" name="A/V Available" value="Adapters for Windows (VGA)"> Adapters for Windows (VGA)</label>
+                <label><input type="checkbox" name="A/V Available" value="None of the above"> None of the above</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Training Request</button>
+            <p class="form-error"></p>
+          </div>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <h2>Request Received</h2>
+          <p>Thanks for reaching out! We've got your training request, and a Cayuga's Watchers trainer will be in touch soon to confirm the details.</p>
+          <p><a href="index.html">Return to the homepage</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="img/white-cup.png" alt="">
+            <span>Cayuga's Watchers</span>
+          </div>
+          <p class="footer-note">A student-led 501(c)(3) nonprofit keeping the party safe at Cornell since 2012.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address><a href="mailto:hello@cayugaswatchers.org">hello@cayugaswatchers.org</a></address>
+        </div>
+        <div>
+          <h4>Donate by Check</h4>
+          <address>
+            Cayuga's Watchers, Inc.<br>
+            c/o Sciarabba Walker &amp; Co<br>
+            410 E Upland Road<br>
+            Ithaca, NY 14850
+          </address>
+        </div>
+        <div class="footer-filings">
+          <h4>Public Filings</h4>
+          <p class="footer-fsub">Annual Letters &amp; Reports</p>
+          <ul class="footer-flist">
+            <li><a href="assets/2026-Annual-Letter.pdf" target="_blank" rel="noopener">2026</a></li>
+            <li><a href="assets/2024-Annual-Letter.pdf" target="_blank" rel="noopener">2024</a></li>
+            <li><a href="assets/2023-Annual-Letter.pdf" target="_blank" rel="noopener">2023</a></li>
+            <li><a href="assets/2019%20Annual%20Report.pdf" target="_blank" rel="noopener">2019</a></li>
+            <li><a href="assets/2018%20Annual%20Report.pdf" target="_blank" rel="noopener">2018</a></li>
+            <li><a href="assets/CW_Annual_Report_FY%20_2017.pdf" target="_blank" rel="noopener">2017</a></li>
+            <li><a href="assets/CW_Annual_Report_FY_2016.pdf" target="_blank" rel="noopener">2016</a></li>
+            <li><a href="assets/CW_Annual_Report_FY_2015.pdf" target="_blank" rel="noopener">2015</a></li>
+          </ul>
+          <p class="footer-fsub">Additional Filings</p>
+          <ul class="footer-flist">
+            <li><a href="assets/IRS_Form.pdf" target="_blank" rel="noopener">IRS Form 1023</a></li>
+            <li><a href="assets/CW_2016_990.pdf" target="_blank" rel="noopener">2016 990-N</a></li>
+            <li><a href="assets/CW_June_2014_990_NYS_Char_500.pdf" target="_blank" rel="noopener">2014 990 &amp; CHAR500</a></li>
+            <li><a href="assets/2014-990-EZ.pdf" target="_blank" rel="noopener">2014 990-EZ</a></li>
+            <li><a href="assets/2013-990N.pdf" target="_blank" rel="noopener">2013 990-N</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cayuga's Watchers, Inc. &mdash; a registered 501(c)(3) nonprofit organization.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

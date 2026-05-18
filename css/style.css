@@ -482,6 +482,89 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
   line-height: 1.8;
 }
 
+/* ---------- Forms ---------- */
+.form-wrap { max-width: 720px; margin: 0 auto; }
+.cw-form {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  color-scheme: dark;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.field { display: flex; flex-direction: column; }
+.field.full { grid-column: 1 / -1; }
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.88);
+}
+.field label .req { color: var(--accent); }
+.field label .opt { color: var(--muted); font-weight: 400; }
+.field .hint { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.cw-form input:not([type="checkbox"]),
+.cw-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.97rem;
+}
+.cw-form textarea { resize: vertical; min-height: 120px; line-height: 1.55; }
+.cw-form input:focus,
+.cw-form textarea:focus { outline: none; border-color: var(--accent); }
+.cw-form input::placeholder,
+.cw-form textarea::placeholder { color: rgba(255, 255, 255, 0.34); }
+.checkbox-group { display: flex; flex-direction: column; gap: 11px; }
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+.form-actions { margin-top: 28px; }
+.cw-form button.btn { cursor: pointer; border: 0; }
+.cw-form button.btn:disabled { opacity: 0.6; cursor: default; }
+.form-error {
+  display: none;
+  margin-top: 14px;
+  color: #ffb3b3;
+  font-size: 0.92rem;
+}
+.form-success {
+  display: none;
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  padding: 52px 40px;
+  text-align: center;
+}
+.form-success h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.form-success p { color: var(--muted); max-width: 440px; margin: 0 auto 8px; }
+
 /* ---------- Footer ---------- */
 footer {
   background: var(--panel-strong);
@@ -578,6 +661,8 @@ footer a:hover { color: var(--accent); }
   .info-card { padding: 30px 24px; }
   .donate-box { padding: 30px 24px; }
   .page-header { padding: 130px 0 40px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .cw-form { padding: 28px 22px; }
 }
 
 @media (max-width: 420px) {
