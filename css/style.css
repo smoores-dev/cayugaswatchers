@@ -456,44 +456,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
   color: var(--accent);
 }
 
-/* ---------- Filings ---------- */
-.filings { max-width: 740px; margin: 0 auto; }
-.filings-group { margin-bottom: 26px; }
-.filings-group:last-child { margin-bottom: 0; }
-.filings-group h3 {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 1.6px;
-  color: var(--muted);
-  margin-bottom: 13px;
-}
-.filing-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  list-style: none;
-}
-.filing-pills a,
-.filing-pills span {
-  display: inline-block;
-  padding: 8px 15px;
-  border-radius: 8px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  border: 1px solid var(--border);
-  background: var(--panel);
-  color: #fff;
-  text-decoration: none;
-  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
-}
-.filing-pills a:hover { border-color: var(--accent); color: var(--accent); }
-.filing-pills a.featured {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #150022;
-}
-.filing-pills a.featured:hover { background: var(--accent-hover); color: #150022; }
-
 /* ---------- Donate ---------- */
 .donate-grid {
   display: grid;
@@ -528,8 +490,8 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 36px;
+  grid-template-columns: 1.3fr 1fr 1fr 1.8fr;
+  gap: 32px;
 }
 .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .footer-brand img { height: 34px; width: auto; }
@@ -555,6 +517,22 @@ footer address {
 }
 footer a { color: var(--muted); text-decoration: none; }
 footer a:hover { color: var(--accent); }
+.footer-fsub {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.42);
+  margin: 16px 0 8px;
+}
+.footer-fsub:first-of-type { margin-top: 0; }
+.footer-flist {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0;
+}
+.footer-flist a { font-size: 0.9rem; white-space: nowrap; }
 .footer-bottom {
   margin-top: 44px;
   padding-top: 24px;
@@ -564,7 +542,7 @@ footer a:hover { color: var(--accent); }
 .footer-bottom p { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
