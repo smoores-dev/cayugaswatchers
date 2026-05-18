@@ -1,467 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Cayuga's Watchers</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!--Custom CSS -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!--Custom Stats Counter-->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
-      d3.json("https://sheets.googleapis.com/v4/spreadsheets/1QKCpQw15ek40yb4iNSP1ztmOML9U7FFmn0HLw9i8HnQ/values/A1:C3?key=AIzaSyDsAIkBEdysJPXBzntUgMHSdYMhoCo0n2s", function(data) {
-        document.getElementById("number-events").innerText = data.values[1][0];
-        document.getElementById("number-interventions").innerText = data.values[1][1];
-        document.getElementById("number-employees").innerText = data.values[1][2];
-      });
-    </script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cayuga's Watchers — Keeping the Party Safe Since 2012</title>
+  <meta name="description" content="Cayuga's Watchers is a student-led 501(c)(3) nonprofit making Cornell's party culture safer through honest, peer-to-peer bystander intervention training.">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="img/white-cup.png" alt="Cayuga's Watchers logo">
+        <span>Cayuga's Watchers</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html" class="btn-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    Cayuga's Watchers
-                </a>
-            </div>
+  <!-- Hero -->
+  <header class="hero">
+    <img src="img/white-cup.png" alt="Cayuga's Watchers logo" class="logo">
+    <h1>Keeping the Party<br>Safe Since 2012</h1>
+    <p class="subtitle">A student-led nonprofit making Cornell's party culture safer &mdash; through honest, peer-to-peer bystander intervention training.</p>
+    <a href="#impact" class="scroll-cue" aria-label="Scroll down">&#8595;</a>
+  </header>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#page-top">Home</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false">
-                            News <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="articles.html">Articles</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false">
-                            Services <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScC6bQbU_MTwz8i6gsRrN3d-HIuzxn_9tCmP4UQjkYyyLWnJg/viewform?usp=sf_link">Request Training</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false">
-                            Get Involved <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzm-RyDQQb-LNyAXIWndoc_BFJ16z-h6eHstmAQUOunRy32Q/viewform?usp=sf_link">Apply to Train (Get Paid!)</a></li>
-                          <!-- <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd9b6qZ0Gb30vQzlupTqvn77PB4n8ShyW9C2mLlo6lolXQcuw/viewform">Apply to Exec</a></li> -->
-                          <!-- <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeTcQKuUvO_dWL8xl8YNvnOQNMjvvj2S8fj3AYeiQomhm75jg/viewform">Employee Materials</a></li> -->
-                        </ul>
-                    <!-- </li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li> -->
-                    <!-- <li>
-                        <a class="page-scroll donate" href="#contact">Contact</a>
-                    </li> -->
-                    <!-- <li>
-                        <a href="https://cayugaswatchers.z2systems.com/login.jsp">Login</a>
-                    </li> -->
-                    <li class="donate">
-                        <a class="page-scroll donate" href="#donate">Donate</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+  <!-- Impact numbers -->
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <span class="num" data-target="15500" data-suffix="+">0</span>
+          <span class="label">students trained in bystander intervention since 2012</span>
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <img src="img/white-cup.png">
-                        <h1 class="tagline">KEEPING THE PARTY SAFE SINCE 2012</h1>
-                        <p class="motto">By engaging students in <i>comprehensive bystander intervention training programs</i> across campus, Cayuga's Watchers aims to progress social norms at Cornell by emphasizing responsible drinking and a safe party culture.</p>
-                        <a href="#mission" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="stat">
+          <span class="num" data-target="75" data-suffix="+">0</span>
+          <span class="label">unique campus organizations trained</span>
         </div>
-    </header>
-
-    <!-- Mission Section -->
-    <section class="container content-section text-center mission">
-        <div id="mission" class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Mission, Values, & Goals</h2>
-            <!--    <div class="row">
-                    <div class="col-sm-4">
-                      <div class="circle operations">
-                        <h2>Operations</h2>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="circle values">
-                        <h2>Values</h2>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="circle goals">
-                        <h2>Goals</h2>
-                      </div>
-                    </div>
-                </div> -->
-                <p>Cayuga’s Watchers is a student-led 501(c)(3) independent organization, conceived to mitigate the harms associated with high-risk drinking and promote student safety at Cornell University.</p>
-                <p>We aim to become an established national model for combating high-risk drinking by equipping students with the knowledge and skills to promote peer social responsibility.</p>
-            </div>
+        <div class="stat">
+          <span class="num" data-target="98" data-suffix="%">0</span>
+          <span class="label">of trained students feel ready to step in</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Services</h2>
-                <p>Cayuga's Watchers provides straightforward and honest, research-backed bystander intervention education. Our training is created and facilitated for students, by students, completely free of charge. 
-                    </p>
-                
-            <h2>Bystander Intervention Training</h2>
-            <p>Cayuga's Watchers is about friends looking out for friends. It's about progressing our social norms to move past the culture of outright irresponsible and dangerous drinking habits. We help Cornell students build the skills to recognize when something is truly *off* and then confidently intervene to change the course of the night.</p>
+  <hr class="divider">
 
-<p>We believe that our student-to-student training is the very best bystander training program available. Our sessions are engaging, interactive, and honest. We are independent and student-operated, so our trainers keep it real!</p>
-            </div>
-                </section>
-                <section class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>We're Hiring!</h2>
-                <p>If you're interested in promoting positive social norms and teaching others how to be effective, active bystanders, then we have a job for you!</p> <p> Responsibilities include revising training materials/curriculum, delivering training to large groups of students (in-person and virtually), observing and evaluating fellow trainers, recruiting new trainers, promoting CW's activities across campus, and periodically meeting with CW's Board of Directors. An awesome candidate is a confident speaker who can adapt to each audience, give/accept constructive feedback, and represent CW's mission in spaces across campus.</p> <p>If that sounds like you, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzm-RyDQQb-LNyAXIWndoc_BFJ16z-h6eHstmAQUOunRy32Q/viewform?usp=sf_link">click here</a> to apply now.</p>
+  <!-- What We Do -->
+  <section class="section">
+    <div class="container">
+      <div class="prose text-center">
+        <span class="eyebrow">What We Do</span>
+        <h2 class="section-title text-center">Friends Looking Out for Friends</h2>
+        <p class="lead">Cayuga's Watchers is a student-led 501(c)(3) nonprofit working to reduce the harms of high-risk drinking at Cornell. We provide honest, research-backed bystander intervention training &mdash; created and led by students, for students, and completely free of charge.</p>
+        <p><a href="about.html">Learn more about us &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Action cards -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Get Involved</h2>
+      <div class="action-cards">
+        <a href="donate.html" class="action-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.5 2 4.8 5.4 4.2 8 3.7 10.4 5 12 7.3 13.6 5 16 3.7 18.6 4.2 22 4.8 23.6 8.5 22 11.7 19.5 16.4 12 21 12 21Z"/></svg>
+          </div>
+          <h3>Donate</h3>
+          <p>Help us keep training free for every student organization on campus.</p>
+          <span class="go">Support our mission &rarr;</span>
+        </a>
+        <a href="get-involved.html#request" class="action-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="16" rx="2"/><path d="M3.5 9h17M8 2.5v4M16 2.5v4M7.5 13.5l2 2 4-4.5"/></svg>
+          </div>
+          <h3>Request a Training</h3>
+          <p>Book a free, student-led session for your club, team, or chapter.</p>
+          <span class="go">Bring us to your org &rarr;</span>
+        </a>
+        <a href="get-involved.html#trainer" class="action-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"/></svg>
+          </div>
+          <h3>Become a Trainer</h3>
+          <p>Get paid to lead trainings and promote a safer campus culture.</p>
+          <span class="go">Apply to train &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Public Filings -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Public Filings</h2>
+      <div class="filings">
+        <div class="filings-group">
+          <h3>Annual Letters &amp; Reports</h3>
+          <ul class="filing-pills">
+            <li><a class="featured" href="assets/2026-Annual-Letter.pdf" target="_blank" rel="noopener" title="2026 Annual Letter">2026</a></li>
+            <li><span class="pending">2025</span></li>
+            <li><span class="pending">2024</span></li>
+            <li><span class="pending">2023</span></li>
+            <li><span class="pending">2022</span></li>
+            <li><span class="pending">2021</span></li>
+            <li><span class="pending">2020</span></li>
+            <li><a href="assets/2019%20Annual%20Report.pdf" target="_blank" rel="noopener" title="2019 Annual Report">2019</a></li>
+            <li><a href="assets/2018%20Annual%20Report.pdf" target="_blank" rel="noopener" title="2018 Annual Report">2018</a></li>
+            <li><a href="assets/CW_Annual_Report_FY%20_2017.pdf" target="_blank" rel="noopener" title="2017 Annual Report">2017</a></li>
+            <li><a href="assets/CW_Annual_Report_FY_2016.pdf" target="_blank" rel="noopener" title="2016 Annual Report">2016</a></li>
+            <li><a href="assets/CW_Annual_Report_FY_2015.pdf" target="_blank" rel="noopener" title="2015 Annual Report">2015</a></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Support Section -->
-    <section class="container content-section text-center">
-        <div class="row">
-            <div id="donate" class="col-lg-8 col-lg-offset-2">
-                <h2>Support Our Mission</h2>
-                <p>The greatest challenge facing Cayuga’s Watchers is continued funding. Unlike other collegiate bystander intervention programs, Cayuga’s Watchers operates independently of Cornell University as an entirely separate 501(c)(3) nonprofit. Cayuga’s Watchers relies on the generosity of other nonprofits and charitable organizations, as well as individual contributors to pay our student employees while remaining entirely free of charge to student organizations.</p>
-                <p>Will you consider donating to help us continue to grow and improve? Feel free to contact the Chairman of our Board of Directors, <a href="mailto:jmueller@cayugaswatchers.org">John Mueller</a> or our Treasurer and Development Committee Chair, <a href="mailto:mrubins@cayugaswatchers.org">Matt Rubins</a> with any questions about CW's current operations, future plans, or anything else you'd like to know.</p>
-            </div>
+        <div class="filings-group">
+          <h3>Additional Filings</h3>
+          <ul class="filing-pills">
+            <li><a href="assets/IRS_Form.pdf" target="_blank" rel="noopener">IRS Form 1023</a></li>
+            <li><a href="assets/CW_2016_990.pdf" target="_blank" rel="noopener">2016 990-N</a></li>
+            <li><a href="assets/CW_June_2014_990_NYS_Char_500.pdf" target="_blank" rel="noopener">2014 990 &amp; CHAR500</a></li>
+            <li><a href="assets/2014-990-EZ.pdf" target="_blank" rel="noopener">2014 990-EZ</a></li>
+            <li><a href="assets/2013-990N.pdf" target="_blank" rel="noopener">2013 990-N</a></li>
+          </ul>
         </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-4 donate-check">
-              <h4>Donate by Check:</h4>
-                  <address>
-                    Cayuga's Watchers, Inc. <br>
-                    c/o Sciarabba Walker & Co<br>
-                    410 E Upland Road<br>
-                    Ithaca, NY 14850
-                  </address>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4 donate-online pb-2">
-              <h4>Donate Online:</h4>
-                Your online donation is made securely via NeonOne.<br></br><br></br>
-                  <a href="https://cayugaswatchers.z2systems.com/donation.jsp" class="mb-2"><button class="btn btn-primary btn-md">Make a Donation</button></a>
-            </div>
-            <div class="col-sm-1"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="img/white-cup.png" alt="">
+            <span>Cayuga's Watchers</span>
+          </div>
+          <p class="footer-note">A student-led 501(c)(3) nonprofit keeping the party safe at Cornell since 2012.</p>
         </div>
-    </section>
-
-  
-    <section class="container content-section text-center">
-       <!-- Executive Board Section
-   <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 executive-board">
-                <h2>Executive Board</h2>
-                <div class="row">
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/President.jpg" alt="Samantha Lee">
-                        <span class="name">Samantha Lee</span><br>
-                        <span class="role">PRESIDENT</span><br>
-                        <span class="email">president@cayugaswatchers.org</span>
-                    </div>
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/Director.jpg" alt="Elizabeth Wardlow">
-                        <span class="name">Elizabeth Wardlow</span><br>
-                        <span class="role">DIRECTOR</span><br>
-                        <span class="email">director@cayugaswatchers.org</span>
-                        </div>
-                </div>
-                <br>
-
-                <div class="row margin-top-25">
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/VP_Outreach.jpg" alt="Jet Hardie">
-                        <span class="name">Jet Hardie</span><br>
-                        <span class="role">VP OF OUTREACH</span><br>
-                        <span class="email">outreach@cayugaswatchers.org</span>
-                    </div>
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/VP_FinanceDev.jpg" alt="Adi Ramachandran">
-                        <span class="name">Adi Ramachandran</span><br>
-                        <span class="role">VP OF FINANCE & DEVELOPMENT</span><br>
-                        <span class="email">finance@cayugaswatchers.org</span>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row margin-top-25">
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/VP_Training.jpg" alt="Chiara Fontaine">
-                        <span class="name">Chiara Fontaine</span><br>
-                        <span class="role">VP OF RECRUITMENT & TRAINING</span> <br>
-                        <span class="email">training@cayugaswatchers.org</span>
-                    </div>
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/VP_Recruitment.jpg" alt="Caroline Taylor">
-                        <span class="name">Caroline Taylor</span><br>
-                        <span class="role">VP OF RECRUITMENT & TRAINING</span> <br>
-                        <span class="email">recruitment@cayugaswatchers.org</span>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row margin-top-25">
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/VP_Human_Resources.jpg" alt="Amanda Newman">
-                        <span class="name">Amanda Newman</span><br>
-                        <span class="role">VP OF HUMAN RESOURCES</span> <br>
-                        <span class="email">humanresources@cayugaswatchers.org</span>
-                    </div>
-                    <div class="col-sm-6 profile">
-                        <img src="img/headshots_2/VP_Scheduling.jpg" alt="Samantha Spicka">
-                        <span class="name">Samantha Spicka</span><br>
-                        <span class="role">VP OF SCHEDULING</span><br>
-                        <span class="email">scheduling@cayugaswatchers.org</span>
-                    </div>
-                </div>
-                 -->
-        
-                <h2>Founders & Board of Directors</h2>
-                <div class="row">
-                    <div class="col-sm-4 profile">
-                        <img src="img/headshots/John.jpeg" alt="John Mueller">
-                        <span class="name">John Mueller</span><br>
-                        <span class="role">CO-FOUNDER & CHAIRMAN</span>
-                    </div>
-                              <div class="col-sm-4 profile">
-                            <img src="img/headshots/adam.png" alt="Adam Gitlin">
-                            <span class="name">Adam Gitlin</span><br>
-                                  <span class="role">CO-FOUNDER & DIRECTOR EMERITUS</span>
-                    </div>
-                    <div class="col-sm-4 profile">
-                        <img src="img/headshots/eric.png" alt="Eric Silverberg">
-                        <span class="name">Eric Silverberg</span><br>
-                        <span class="role">CO-FOUNDER & DIRECTOR EMERITUS</span>
-                    </div>
-                    </div>
-           
-                <div class="row margin-top-25">
-                    <div class="col-sm-4 profile">
-                        <img src="img/headshots/matt.png" alt="Matt Rubins">
-                        <span class="name">Matt Rubins</span><br>
-                        <span class="role">TREASURER</span>
-                    </div>
-                    <div class="col-sm-4 profile">
-                            <img src="img/headshots/Susan.jpg" alt="Susan Collins">
-                            <span class="name">Susan Collins</span><br>
-                            <span class="role">SECRETARY</span>
-                        </div>  
-                    <div class="col-sm-4 profile">
-                            <img src="img/headshots/Bill.png" alt="Bill Sonnenstuhl">
-                            <span class="name">Bill Sonnenstuhl</span><br>
-                            <span class="role">DIRECTOR</span>
-                        </div>
-                                  </div>
-                                  
-                     <div class="row margin-top-25">
-                    <div class="col-sm-4 profile">
-                            <img src="img/headshots/Ben.jpeg" alt="Ben Bacharach">
-                            <span class="name">Ben Bacharach</span><br>
-                            <span class="role">DIRECTOR</span>
-                        </div>
-                         <div class="col-sm-4 profile">
-                            <img src="img/headshots/Drew.jpeg" alt="Drew Lord">
-                            <span class="name">Drew Lord</span><br>
-                            <span class="role">DIRECTOR</span>
-                        </div>
-                    </div>
-            </div>
+        <div>
+          <h4>Contact</h4>
+          <address><a href="mailto:dlord@cayugaswatchers.org">dlord@cayugaswatchers.org</a></address>
         </div>
-    </section>
-
-
-    <!--Contact Section UPDATE WITH NEW FORMS -->
-    <section class="container content-section text-center">
-        <div class="col-lg-8 col-lg-offset-2 contact-container">
-            <h2 class="text-center" style="margin-bottom:20px;">Contact Us</h2>
-            <br>
-            <h5>Become Part of Cayuga's Watchers</h5>
-            <div class="row margin-top-25">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzm-RyDQQb-LNyAXIWndoc_BFJ16z-h6eHstmAQUOunRy32Q/viewform?usp=sf_link">Apply to be a PAID Trainer</a>
-            </div>
-            <br>
-            <br>
-            <h5>Get Cayuga's Watchers For Your Organization</h5>
-            <div class="row margin-top-25">
-           
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScC6bQbU_MTwz8i6gsRrN3d-HIuzxn_9tCmP4UQjkYyyLWnJg/viewform?usp=sf_link">Submit our Training Request Form</a>
-              
-                
-            </div>
-            <br>
-            <br>
-            <p> For all other requests, please reach out to <a href="mailto:jmueller@cayugaswatchers.org">John Mueller</a>.</p>
+        <div>
+          <h4>Donate by Check</h4>
+          <address>
+            Cayuga's Watchers, Inc.<br>
+            c/o Sciarabba Walker &amp; Co<br>
+            410 E Upland Road<br>
+            Ithaca, NY 14850
+          </address>
         </div>
-        
-        
-    </section>
-   <!-- Contact Section
-    <section>
-        <div class="row"> 
-            <div class="col-lg-8 col-lg-offset-2 contact-container">
-            <h2 class="text-center">Contact Us</h2>
-            <form class="contact-form" action="https://formspree.io/webmaster@cayugaswatchers.org" method="POST"> 
-              <p>Name:<br><input type="text" name="name"><p>
-              <p>Email:<br><input type="email" name="_replyto"></p>
-              <p>Message:<br>
-              <input type="hidden" name="_next" value="index.html">
-              <textarea name="message" cols="60" rows="10"></textarea>
-              </p>
-              <p><button type="submit" class="btn btn-primary btn-lg contact-button">Send</button></p> 
-            </form>
-            </div>
-        </div> 
-    </section>  -->
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cayuga's Watchers, Inc. &mdash; a registered 501(c)(3) nonprofit organization.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Public Filings Section -->
-    <section class="container content-section text-center">
-        <div class="col-lg-8 col-lg-offset-2 contact-container">
-            <h2 class="text-center" style="margin-bottom:20px;">Public Filings</h2>
-            <br>
-            <h5>Annual Reports</h5>
-            <div class="row">
-        
-                <div class="col-sm-4">
-                    <a href="assets/2019 Annual Report.pdf">2019 Annual Report</a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="assets/2018 Annual Report.pdf">2018 Annual Report</a>
-               </div>
-                <div class="col-sm-4">
-                    <a href="assets/CW_Annual_Report_FY _2017.pdf">2017 Annual Report</a>
-                </div>
-            </div>
-            
-        
-            <div class="row margin-top-25">
-                <div class="col-sm-4">
-                    <a href="assets/CW_Annual_Report_FY_2016.pdf">2016 Annual Report</a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="assets/CW_Annual_Report_FY_2015.pdf">2015 Annual Report</a>
-               </div>
-                
-            </div>
-            <br>
-            <h5>ADDITIONAL</h5>
-            <div class="row">
-        
-                <div class="col-sm-4">
-                    <a href="assets/IRS_Form.pdf">IRS Form 1023</a>
-                </div>
-                <!-- <div class="col-sm-4">
-                    <a href="assets/2018 Annual Report.pdf">2019 990</a>
-               </div> -->
-                <div class="col-sm-4">
-                    <a href="assets/CW_2016_990.pdf">2016 990-N</a>
-                </div>
-            </div>
-            
-        
-            <div class="row margin-top-25">
-                <div class="col-sm-4">
-                    <a href="assets/CW_June_2014_990_NYS_Char_500.pdf">2014 990 & NYS Char 500</a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="assets/2014-990-EZ.pdf">2014 990-EZ</a>
-               </div>
-               <div class="col-sm-4">
-                    <a href="assets/2013-990N.pdf">2013 990-N</a>
-                </div>
-                
-            </div>   
-        </div>
-        
-    </section>
-    
-    
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Cayuga's Watchers 2022</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
+  <script src="js/main.js"></script>
 </body>
-
 </html>
