@@ -322,7 +322,10 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 44px;
+  display: flex;
+  flex-direction: column;
 }
+.info-card > p:last-child { margin-top: auto; }
 .info-card h2 {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -340,7 +343,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
-  align-items: start;
 }
 
 /* ---------- Two-column split (About sections) ---------- */
