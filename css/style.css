@@ -490,12 +490,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
   color: #150022;
 }
 .filing-pills a.featured:hover { background: var(--accent-hover); color: #150022; }
-.filing-pills .pending {
-  background: transparent;
-  border-style: dashed;
-  color: rgba(255, 255, 255, 0.38);
-  font-weight: 500;
-}
 
 /* ---------- Donate ---------- */
 .donate-grid {
