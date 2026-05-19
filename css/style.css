@@ -81,7 +81,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 
 .text-center { text-align: center; }
-.text-center .section-title::after { margin-left: auto; margin-right: auto; }
+.section-title.text-center::after { display: none; }
 
 .lead { font-size: 1.12rem; color: var(--muted); }
 
@@ -616,6 +616,10 @@ footer a:hover { color: var(--accent); }
   margin: 0;
 }
 .footer-flist a { font-size: 0.9rem; white-space: nowrap; }
+.footer-filings ul:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+}
 .footer-bottom {
   margin-top: 44px;
   padding-top: 24px;
