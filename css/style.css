@@ -645,36 +645,17 @@ footer a:hover { color: var(--accent); }
 }
 .footer-signup:hover { background: var(--accent); color: #150022; }
 
-.signup-nudge {
-  text-align: center;
-  margin-top: 44px;
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-.signup-nudge a {
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.signup-nudge a:hover { color: var(--accent-hover); }
-
 /* ---------- Donate embed ---------- */
-.donate-embed {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--panel);
-}
+.donate-embed { overflow: hidden; }
 .donate-embed iframe {
   display: block;
   width: 100%;
-  height: 1200px;
+  height: 760px;
   border: 0;
 }
 .donate-alt {
   text-align: center;
-  margin-top: 22px;
+  margin-top: 16px;
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -718,7 +699,7 @@ footer a:hover { color: var(--accent); }
   .page-header { padding: 130px 0 40px; }
   .form-grid { grid-template-columns: 1fr; }
   .cw-form { padding: 28px 22px; }
-  .donate-embed iframe { height: 1500px; }
+  .donate-embed iframe { height: 1200px; }
 }
 
 @media (max-width: 420px) {
