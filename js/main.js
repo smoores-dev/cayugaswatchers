@@ -105,3 +105,104 @@
     });
   });
 })();
+
+// --- Scroll-reveal + draw-in action-card icons ---
+(function () {
+  var sel = '.stat, .action-card, .info-card, .timeline-item, .callout, .board-member, .prose, .donate-embed, .cw-form';
+  var els = document.querySelectorAll(sel);
+  if (!els.length) return;
+
+  var reduce = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function iconShapes(card) {
+    return card.querySelectorAll('.icon svg path, .icon svg rect, .icon svg circle, .icon svg line');
+  }
+  function drawIcon(card) {
+    iconShapes(card).forEach(function (s) { s.style.strokeDashoffset = 0; });
+  }
+  // Prime the action-card icons so they can draw themselves in
+  document.querySelectorAll('.action-card').forEach(function (card) {
+    iconShapes(card).forEach(function (s) {
+      try {
+        var len = s.getTotalLength();
+        s.style.strokeDasharray = len;
+        s.style.strokeDashoffset = reduce ? 0 : len;
+      } catch (e) {}
+    });
+  });
+
+  function show(el) {
+    el.classList.add('in-view');
+    if (el.classList.contains('action-card')) drawIcon(el);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(show);
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries, o) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      show(entry.target);
+      o.unobserve(entry.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+  els.forEach(function (el) { obs.observe(el); });
+})();
+
+// --- Progress ring around the percentage stat ---
+(function () {
+  var pct = document.querySelector('.stat .num[data-suffix="%"]');
+  if (!pct) return;
+  var target = parseFloat(pct.dataset.target) || 0;
+  var R = 45, C = 2 * Math.PI * R;
+
+  var ring = document.createElement('div');
+  ring.className = 'stat-ring';
+  ring.innerHTML =
+    '<svg viewBox="0 0 100 100" aria-hidden="true">' +
+    '<circle class="ring-track" cx="50" cy="50" r="' + R + '"></circle>' +
+    '<circle class="ring-progress" cx="50" cy="50" r="' + R + '"></circle>' +
+    '</svg>';
+  pct.parentNode.insertBefore(ring, pct);
+  ring.appendChild(pct);
+
+  var prog = ring.querySelector('.ring-progress');
+  prog.style.strokeDasharray = C;
+  prog.style.strokeDashoffset = C;
+
+  function fill() { prog.style.strokeDashoffset = C * (1 - target / 100); }
+
+  if ('IntersectionObserver' in window) {
+    var o = new IntersectionObserver(function (entries, ob) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { fill(); ob.unobserve(entry.target); }
+      });
+    }, { threshold: 0.5 });
+    o.observe(ring);
+  } else {
+    fill();
+  }
+})();
+
+// --- Scroll-progress bar + nav shadow on scroll ---
+(function () {
+  var bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.appendChild(bar);
+  var nav = document.querySelector('.site-nav');
+  var ticking = false;
+
+  function update() {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    bar.style.width = (h > 0 ? (st / h) * 100 : 0) + '%';
+    if (nav) nav.classList.toggle('scrolled', st > 40);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+})();
