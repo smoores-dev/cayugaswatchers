@@ -151,41 +151,6 @@
   els.forEach(function (el) { obs.observe(el); });
 })();
 
-// --- Progress ring around the percentage stat ---
-(function () {
-  var pct = document.querySelector('.stat .num[data-suffix="%"]');
-  if (!pct) return;
-  var target = parseFloat(pct.dataset.target) || 0;
-  var R = 45, C = 2 * Math.PI * R;
-
-  var ring = document.createElement('div');
-  ring.className = 'stat-ring';
-  ring.innerHTML =
-    '<svg viewBox="0 0 100 100" aria-hidden="true">' +
-    '<circle class="ring-track" cx="50" cy="50" r="' + R + '"></circle>' +
-    '<circle class="ring-progress" cx="50" cy="50" r="' + R + '"></circle>' +
-    '</svg>';
-  pct.parentNode.insertBefore(ring, pct);
-  ring.appendChild(pct);
-
-  var prog = ring.querySelector('.ring-progress');
-  prog.style.strokeDasharray = C;
-  prog.style.strokeDashoffset = C;
-
-  function fill() { prog.style.strokeDashoffset = C * (1 - target / 100); }
-
-  if ('IntersectionObserver' in window) {
-    var o = new IntersectionObserver(function (entries, ob) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { fill(); ob.unobserve(entry.target); }
-      });
-    }, { threshold: 0.5 });
-    o.observe(ring);
-  } else {
-    fill();
-  }
-})();
-
 // --- Scroll-progress bar + nav shadow on scroll ---
 (function () {
   var bar = document.createElement('div');
