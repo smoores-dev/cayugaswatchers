@@ -650,7 +650,7 @@ footer a:hover { color: var(--accent); }
 .donate-embed iframe {
   display: block;
   width: 100%;
-  height: 660px;
+  height: 920px;
   border: 0;
 }
 .donate-alt {
@@ -704,7 +704,7 @@ footer a:hover { color: var(--accent); }
   .page-header { padding: 130px 0 40px; }
   .form-grid { grid-template-columns: 1fr; }
   .cw-form { padding: 28px 22px; }
-  .donate-embed iframe { height: 1120px; }
+  .donate-embed iframe { height: 1420px; }
 }
 
 @media (max-width: 420px) {
